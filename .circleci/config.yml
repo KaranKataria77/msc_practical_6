@@ -20,7 +20,7 @@ jobs:
       - checkout
       - run: exho "a more familiar hi"
       - run: sleep 15
-workflow:
+workflows:
   version: 2
   one_and_two:
     jobs:
