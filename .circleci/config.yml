@@ -8,7 +8,7 @@ jobs:
           password: 7718010801
     steps:
       - checkout
-      - run: exho "a first hello"
+      - run: echo "a first hello"
       - run: sleep 25
   two:
     docker:
@@ -18,7 +18,7 @@ jobs:
           password: 7718010801
     steps:
       - checkout
-      - run: exho "a more familiar hi"
+      - run: echo "a more familiar hi"
       - run: sleep 15
 workflows:
   version: 2
