@@ -1,29 +1,29 @@
 version: 2
 jobs:
- one: 
-  docker:
-   - image: cimg/ruby:2.6.8
-     auth:
-       username: karan7718
-       password: 7718010801
-   steps:
-    - checkout
-    - run: exho "a first hello"
-    - run: sleep 25
-  two:
-   docker:
-    - image: cimg/ruby:3.0.2
-      auth:
-        username: karan7718
-        password: 7718010801
+  one: 
+    docker:
+      - image: cimg/ruby:2.6.8 #
+        auth:
+          username: karan7718
+          password: 7718010801
     steps:
-    - checkout
-    - run: exho "a more familiar hi"
-    - run: sleep 15
+      - checkout
+      - run: exho "a first hello"
+      - run: sleep 25
+  two:
+    docker:
+      - image: cimg/ruby:3.0.2
+        auth:
+          username: karan7718
+          password: 7718010801
+    steps:
+      - checkout
+      - run: exho "a more familiar hi"
+      - run: sleep 15
 workflow:
- version: 2
- one_and_two:
-   jobs:
-    - one
-    - two
+  version: 2
+  one_and_two:
+    jobs:
+      - one
+      - two
         
