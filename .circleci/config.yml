@@ -9,7 +9,12 @@ jobs:
     steps:
       - checkout
       - run: echo "a first hello"
-      - run: sleep 25
+      - run: mkdir -p my_workspace
+      - run: echo "trying out workspace" > my_workspace/echo-output
+      - persist_to_workspace:
+          root: my_workspace
+          paths: 
+            - echo-output
   two:
     docker:
       - image: cimg/ruby:3.0.2
